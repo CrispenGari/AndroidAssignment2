@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/header_menu"
+    >
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_bookmarks"
+        android:title="Search"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"
+        />
+    <item
+        android:id="@+id/action_create"
+        android:icon="@drawable/ic_bookmarks"
+        android:title="Create"
+        android:iconTint="@color/white"
+        app:showAsAction="ifRoom" />
+</menu>
