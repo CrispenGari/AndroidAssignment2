@@ -1,5 +1,7 @@
 plugins {
+    id("com.google.devtools.ksp") version "2.0.21-1.0.27" apply false
     alias(libs.plugins.android.application)
+//    id("com.google.devtools.ksp")
 }
 
 android {
@@ -35,6 +37,9 @@ android {
 }
 
 dependencies {
+    implementation("com.github.bumptech.glide:glide:4.15.1")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.15.1")
+    annotationProcessor(libs.room.compiler)
     implementation(libs.room.runtime)
     implementation(libs.appcompat)
     implementation(libs.material)

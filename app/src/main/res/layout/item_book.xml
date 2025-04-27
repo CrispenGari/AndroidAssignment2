@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/primary"
+    android:orientation="horizontal"
+    android:padding="20dp"
+    android:radius="10dp"
+    android:layout_marginBottom="7dp"
+    >
+
+    <!-- Book Cover Image -->
+    <ImageView
+        android:id="@+id/bookCover"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="Book cover"
+        android:scaleType="centerCrop" />
+
+    <!-- Book Details (Title, Author, Seller, Price) -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <!-- Book Title -->
+        <TextView
+            android:id="@+id/bookTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:fontFamily="@font/bold"
+            android:textSize="20sp"
+            />
+
+        <!-- Book Author -->
+        <TextView
+            android:id="@+id/bookAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:fontFamily="@font/bold"
+            android:textSize="14sp"
+            />
+
+        <!-- Book Price -->
+        <TextView
+            android:id="@+id/bookPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:textSize="25sp"
+            android:textColor="@color/red"
+            />
+
+        <!-- Badge for Number of Copies -->
+        <TextView
+            android:id="@+id/bookCopiesBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:fontFamily="@font/bold"
+            android:textSize="14sp"/>
+
+        <!-- Seller Name -->
+        <TextView
+            android:id="@+id/bookSeller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:fontFamily="@font/bold"
+            android:textSize="14sp"
+            />
+        <!-- Seller Email Address -->
+        <TextView
+            android:id="@+id/bookSellerEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:fontFamily="@font/bold"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

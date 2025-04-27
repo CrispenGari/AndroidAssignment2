@@ -57,20 +57,6 @@
                     android:inputType="textPersonName" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Seller Name -->
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Seller Name"
-                android:layout_marginTop="16dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextSellerName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName" />
-            </com.google.android.material.textfield.TextInputLayout>
-
             <!-- Number of Copies -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -187,12 +173,13 @@
 
             <!-- Save Button -->
             <Button
-                android:id="@+id/buttonSaveUser"
+                android:id="@+id/buttonUpload"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Save"
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="100dp"
+                android:onClick="uploadBook"
                 />
 
         </LinearLayout>

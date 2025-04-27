@@ -11,7 +11,7 @@ import androidx.room.*;
                 onDelete = ForeignKey.CASCADE
         ),
         indices = {
-                @Index(value = {"title", "sellerName"}, unique = true),
+                @Index(value = {"title"}, unique = true),
                 @Index(value = {"userId"})
         }
 )
@@ -41,6 +41,22 @@ public class Book {
     private String coverPage;
     @ColumnInfo(name = "userId")
     private Long userId;
+
+    @Override
+    @NonNull
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", sellerName='" + sellerName + '\'' +
+                ", numberOfCopies=" + numberOfCopies +
+                ", price=" + price +
+                ", bankInfo='" + bankInfo + '\'' +
+                ", coverPage='" + coverPage + '\'' +
+                ", userId=" + userId +
+                '}';
+    }
 
     public Long getId() {
         return id;
@@ -106,22 +122,17 @@ public class Book {
         this.userId = userId;
     }
 
-    @NonNull
-    @Override
-    public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                ", sellerName='" + sellerName + '\'' +
-                ", numberOfCopies=" + numberOfCopies +
-                ", price=" + price +
-                ", bankInfo='" + bankInfo + '\'' +
-                ", userId=" + userId +
-                '}';
+    public String getCoverPage() {
+        return coverPage;
     }
 
-    public Book(String title, String author, String sellerName, int numberOfCopies, double price, String bankInfo, Long userId) {
+    public void setCoverPage(String coverPage) {
+        this.coverPage = coverPage;
+    }
+
+
+    public Book(String title, String author, String sellerName, int numberOfCopies, double price, String bankInfo, String coverPage,
+                Long userId) {
         this.title = title;
         this.author = author;
         this.sellerName = sellerName;
@@ -129,5 +140,6 @@ public class Book {
         this.price = price;
         this.bankInfo = bankInfo;
         this.userId = userId;
+        this.coverPage = coverPage;
     }
 }

@@ -12,22 +12,8 @@ import com.example.myapplication.models.Book;
 import com.example.myapplication.models.User;
 
 
-@Database(entities = {User.class, Book.class}, version = 1)
+@Database(entities = {User.class, Book.class}, version = 1, exportSchema = false)
  public abstract  class AppDatabase extends RoomDatabase {
      public abstract UserDao userDao();
      public abstract BookDao bookDao();
-     private static volatile AppDatabase INSTANCE;
-
-     static AppDatabase getInstance(Context context) {
-      if (INSTANCE == null) {
-       synchronized (AppDatabase.class) {
-        if (INSTANCE == null) {
-         INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                         AppDatabase.class, "books")
-                 .build();
-        }
-       }
-      }
-      return INSTANCE;
-     }
 }
