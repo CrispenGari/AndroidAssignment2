@@ -12,8 +12,11 @@ public interface BookDao {
     @Insert
     public void insertBook(Book book);
 
+    @Query("SELECT id FROM books WHERE LOWER(title) LIKE LOWER('%' || :title || '%') LIMIT 1")
+    Long getBookByTitle(String title);
+
     @Transaction
-    @Query("SELECT * FROM books")
+    @Query("SELECT * FROM books ORDER BY id DESC")
     LiveData<List<BookWithUser>> allBooks();
 
 

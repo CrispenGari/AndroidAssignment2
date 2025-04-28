@@ -28,7 +28,10 @@
                 android:text="Book Details"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/black"
+                />
 
             <!-- Title -->
             <com.google.android.material.textfield.TextInputLayout
@@ -40,7 +43,8 @@
                     android:id="@+id/editTextTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:fontFamily="@font/bold"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Author -->
@@ -48,13 +52,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Author"
-                android:layout_marginTop="16dp">
+                android:layout_marginTop="16dp"
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextAuthor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName" android:fontFamily="@font/bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Number of Copies -->
@@ -68,7 +73,7 @@
                     android:id="@+id/editTextCopies"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="number" />
+                    android:inputType="number" android:fontFamily="@font/bold"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Price -->
@@ -76,13 +81,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Price"
-                android:layout_marginTop="16dp">
+                android:layout_marginTop="16dp" app:prefixText="R">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextPrice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal" android:fontFamily="@font/bold"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Bank Info -->
@@ -96,7 +101,7 @@
                     android:id="@+id/editTextBankInfo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text" />
+                    android:inputType="text" android:fontFamily="@font/bold"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Cover Page (URL or text for now) -->
@@ -104,13 +109,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Cover Page URL"
+
                 android:layout_marginTop="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextCoverPage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textUri" />
+                    android:inputType="textUri" android:fontFamily="@font/bold"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- 🔥 Divider -->
@@ -122,13 +128,58 @@
                 android:layout_marginBottom="16dp" />
 
             <!-- 👤 User Details Section -->
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Seller Details"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/black"/>
+
+
+
+            <androidx.cardview.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="8dp"
+                card_view:cardElevation="4dp"
+                android:layout_marginBottom="10dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp" android:background="@color/tertiary">
+
+                    <TextView
+                        android:id="@+id/cardTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Seller Information Notice"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/bold"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/cardMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Please enter the email address only if you have listed the book before, or fill up the seller details in full."
+                        android:textSize="16sp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/bold"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
             <!-- Email -->
             <com.google.android.material.textfield.TextInputLayout
@@ -140,7 +191,7 @@
                     android:id="@+id/editTextEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="textEmailAddress" android:fontFamily="@font/bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- First Name -->
@@ -148,13 +199,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="First Name"
-                android:layout_marginTop="16dp">
+                android:layout_marginTop="16dp"
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextFirstName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName" android:fontFamily="@font/bold" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Last Name -->
@@ -168,7 +220,7 @@
                     android:id="@+id/editTextLastName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName" android:fontFamily="@font/bold"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Save Button -->
@@ -180,6 +232,7 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="100dp"
                 android:onClick="uploadBook"
+                android:fontFamily="@font/bold"
                 />
 
         </LinearLayout>

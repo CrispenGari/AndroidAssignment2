@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Book Shop</string>
+    <string name="app_name">Book Mate</string>
     <string name="title_home">Books</string>
     <string name="title_bookmarks">Bookmarks</string>
     <string name="title_settings">Settings</string>
