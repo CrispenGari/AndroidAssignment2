@@ -1,6 +1,7 @@
 package com.example.myapplication.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -16,8 +17,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.myapplication.BookActivity;
 import com.example.myapplication.BooksAdapter;
 import com.example.myapplication.R;
+import com.example.myapplication.SearchActivity;
 import com.example.myapplication.db.AppDatabase;
 import com.example.myapplication.models.Book;
 import com.example.myapplication.models.BookWithUser;
@@ -63,8 +66,9 @@ public class HomeFragment extends Fragment {
                     @Override
                     public void onItemClick(int position) {
                         BookWithUser clickedBook = books.get(position);
-                        Toast.makeText(getContext(),
-                                clickedBook.book.getTitle(), Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(requireContext(), BookActivity.class);
+                        intent.putExtra("id", String.valueOf(clickedBook.book.getId()));
+                        startActivity(intent);
                     }
                 });
                 recyclerView.setAdapter(bookAdapter);

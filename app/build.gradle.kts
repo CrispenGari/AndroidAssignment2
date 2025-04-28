@@ -37,8 +37,9 @@ android {
 }
 
 dependencies {
-    implementation("com.github.bumptech.glide:glide:4.15.1")
-    annotationProcessor("com.github.bumptech.glide:compiler:4.15.1")
+    implementation(libs.glide)
+    annotationProcessor(libs.compiler)
+    implementation(libs.gson)
     annotationProcessor(libs.room.compiler)
     implementation(libs.room.runtime)
     implementation(libs.appcompat)
