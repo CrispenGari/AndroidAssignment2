@@ -20,8 +20,8 @@
             />
         <activity
             android:name=".SearchActivity"
-            android:label="Search Books"
-            android:exported="false"  android:parentActivityName=".MainActivity"/>
+            android:label="Books Library"
+            android:exported="false"/>
         <activity
             android:label="Add new Books"
             android:name=".CreateActivity"

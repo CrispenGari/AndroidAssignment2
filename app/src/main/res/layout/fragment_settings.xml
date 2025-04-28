@@ -1,14 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.SettingsFragment">
+    tools:context=".ui.SettingsFragment"
+    android:padding="16dp" android:background="@color/main">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- App Version Text -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/appVersionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="App Version: 1.0.0"
+        android:textSize="16sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/bold"
+        />
 
-</FrameLayout>
+    <!-- Clear Bookmarks Item -->
+    <RelativeLayout
+        android:id="@+id/clearBookmarksItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appVersionText"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"
+        android:background="@color/white">
+
+        <!-- Icon for Clear Bookmarks -->
+        <ImageView
+            android:id="@+id/clearBookmarksIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_delete"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+
+        <!-- Title for Clear Bookmarks -->
+        <TextView
+            android:id="@+id/clearBookmarksTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear Bookmarks"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_toEndOf="@id/clearBookmarksIcon"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="12dp"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/bold"
+            />
+
+        <!-- Subtitle for Clear Bookmarks -->
+        <TextView
+            android:id="@+id/clearBookmarksSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove all saved books"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_toEndOf="@id/clearBookmarksIcon"
+            android:layout_below="@id/clearBookmarksTitle"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"    android:fontFamily="@font/regular"/>
+    </RelativeLayout>
+
+    <!-- Report Issues Item -->
+    <RelativeLayout
+        android:id="@+id/reportIssuesItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/clearBookmarksItem"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"
+        android:background="@color/white">
+
+        <!-- Icon for Report Issues -->
+        <ImageView
+            android:id="@+id/reportIssuesIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_bug_report"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+
+        <!-- Title for Report Issues -->
+        <TextView
+            android:id="@+id/reportIssuesTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Report Issues"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_toEndOf="@id/reportIssuesIcon"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="12dp"
+            android:layout_centerVertical="true"    android:fontFamily="@font/bold"/>
+
+        <!-- Subtitle for Report Issues -->
+        <TextView
+            android:id="@+id/reportIssuesSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Report bugs or issues on GitHub"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_toEndOf="@id/reportIssuesIcon"
+            android:layout_below="@id/reportIssuesTitle"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"    android:fontFamily="@font/regular"/>
+    </RelativeLayout>
+
+    <!-- Check for Updates Item -->
+    <RelativeLayout
+        android:id="@+id/checkUpdatesItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reportIssuesItem"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"
+        android:background="@color/white">
+
+        <!-- Icon for Check Updates -->
+        <ImageView
+            android:id="@+id/checkUpdatesIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_updates"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            />
+
+        <!-- Title for Check Updates -->
+        <TextView
+            android:id="@+id/checkUpdatesTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check for Updates"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_toEndOf="@id/checkUpdatesIcon"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="12dp"
+            android:layout_centerVertical="true"    android:fontFamily="@font/bold" />
+
+        <!-- Subtitle for Check Updates -->
+        <TextView
+            android:id="@+id/checkUpdatesSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Make sure your app is up-to-date"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_toEndOf="@id/checkUpdatesIcon"
+            android:layout_below="@id/checkUpdatesTitle"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"    android:fontFamily="@font/regular"/>
+    </RelativeLayout>
+
+    <!-- Rate App Item -->
+    <RelativeLayout
+        android:id="@+id/rateAppItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkUpdatesItem"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"
+        android:background="@color/white">
+
+        <!-- Icon for Rate App -->
+        <ImageView
+            android:id="@+id/rateAppIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_star"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+
+        <!-- Title for Rate App -->
+        <TextView
+            android:id="@+id/rateAppTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rate the App"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_toEndOf="@id/rateAppIcon"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="12dp"
+            android:layout_centerVertical="true"    android:fontFamily="@font/bold" />
+
+        <!-- Subtitle for Rate App -->
+        <TextView
+            android:id="@+id/rateAppSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Let others know what you think"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_toEndOf="@id/rateAppIcon"
+            android:layout_below="@id/rateAppTitle"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"    android:fontFamily="@font/regular"/>
+    </RelativeLayout>
+
+</RelativeLayout>

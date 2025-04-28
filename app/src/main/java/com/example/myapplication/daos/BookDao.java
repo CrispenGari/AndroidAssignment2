@@ -20,4 +20,9 @@ public interface BookDao {
     @Transaction
     @Query("SELECT * FROM books WHERE id = :id")
     LiveData<BookWithUser> one(Long id);
+
+
+    @Transaction
+    @Query("SELECT * FROM books WHERE title LIKE '%' || :searchQuery || '%' OR author LIKE '%' || :searchQuery || '%'")
+    LiveData<List<BookWithUser>> searchBooks(String searchQuery);
 }
